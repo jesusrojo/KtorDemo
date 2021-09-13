@@ -19,8 +19,6 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import java.text.DateFormat
 
-
-//https://movile.blog/quickly-building-a-kotlin-rest-api-server-using-ktor/
 fun main(args: Array<String>) {
     println("Application #")
 
@@ -140,14 +138,7 @@ fun main(args: Array<String>) {
     }.start(wait = true)
 }
 
-/****************
-curl -X POST http://localhost:8080 -H 'Content-Type: application/json'
-  -d '{
-	"id" : "someId",
-	"quantity" : 10,
-	"isTrue" : false
-}'
-
+/****************USE BASH , not cmd windows
 curl -X POST http://localhost:8080 -H 'Content-Type: application/json' -d '{ "id" : "someId", "quantity" : 10, "isTrue" : false}'
 curl -X POST http://localhost:8080 -d '{ "id" : "someId", "quantity" : 10, "isTrue" : false}'
 curl -X POST -d '{ "id" : "someId", "quantity" : 10, "isTrue" : false}' http://localhost:8080

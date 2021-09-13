@@ -3,7 +3,9 @@ package com.jesusrojo.ktorserver.model
 import com.jesusrojo.ktorappwithserver.model.Response
 
 class FakeUtil {
+
     companion object{
+
         fun getFakeJsonRawData(): String {
             return """{
                         "id": 0,

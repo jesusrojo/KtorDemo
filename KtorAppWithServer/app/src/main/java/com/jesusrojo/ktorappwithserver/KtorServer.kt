@@ -148,7 +148,9 @@ class KtorServer {
 
     fun stopServer() {
         println("stopServer #")
-        // https://dev.to/viniciusccarvalho/graceful-shutdown-of-ktor-applications-1h53
+	   //STOP THE SERVER  https://dev.to/viniciusccarvalho/graceful-shutdown-of-ktor-applications-1h53
+       //https://stackoverflow.com/questions/67679674/start-and-stop-server-when-i-want
+	
         Runtime.getRuntime().addShutdownHook(Thread {
             server?.stop(1, 1, TimeUnit.SECONDS)
         })
