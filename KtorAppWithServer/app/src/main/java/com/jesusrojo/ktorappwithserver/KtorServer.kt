@@ -31,11 +31,9 @@ class KtorServer {
     }
     private lateinit var server: ApplicationEngine
 
-    //https://movile.blog/quickly-building-a-kotlin-rest-api-server-using-ktor/
     fun startServer() {
         println("startServer #")
-
-        server= embeddedServer(Netty, 8080) {
+        server = embeddedServer(Netty, 8080) {
 
             install(StatusPages) {
                 exception<Throwable> { e ->
@@ -125,7 +123,6 @@ class KtorServer {
                       "hasMore": false
                 }*/
 
-
                 // https://medium.com/swlh/ktor-post-request-with-parameters-ed4b3e9674ca
                 // IN BASH IN CMD WINDOWS NOT WORKING
                 // curl -X POST -F param1=value1 -F param2=value2 http://localhost:8080/test2
@@ -158,14 +155,7 @@ class KtorServer {
         Thread.currentThread().join()
     }
 }
-/****************
-curl -X POST http://localhost:8080 -H 'Content-Type: application/json'
--d '{
-"id" : "someId",
-"quantity" : 10,
-"isTrue" : false
-}'
-
+/**************** USE BASH, NOT CMD WINDOWS
 curl -X POST http://localhost:8080 -H 'Content-Type: application/json' -d '{ "id" : "someId", "quantity" : 10, "isTrue" : false}'
 curl -X POST http://localhost:8080 -d '{ "id" : "someId", "quantity" : 10, "isTrue" : false}'
 curl -X POST -d '{ "id" : "someId", "quantity" : 10, "isTrue" : false}' http://localhost:8080

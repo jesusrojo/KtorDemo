@@ -1,7 +1,9 @@
 package com.jesusrojo.ktorappwithserver.model
 
 class FakeUtil {
+
     companion object{
+
         fun getFakeJsonRawData(): String {
             return """{
                         "id": 0,
@@ -29,12 +31,11 @@ class FakeUtil {
             )
         }
 
-        fun getFakeRawData(): List<RawData> {
-            val items = listOf(
+        private fun getFakeRawData(): List<RawData> {
+            return listOf(
                 RawData(10, "title10", "description10"),
                 RawData(11, "title11", "description11")
             )
-            return items
         }
     }
 }

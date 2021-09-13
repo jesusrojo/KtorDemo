@@ -22,6 +22,7 @@ More info: [Adding Ktor to an existing Gradle project][KTOR_GRADLE]
 [ANDROID_STUDIO]: https://developer.android.com/studio/
 
 <!--
+https://movile.blog/quickly-building-a-kotlin-rest-api-server-using-ktor/
 https://stackoverflow.com/questions/62500669/ktor-android-local-http-server-throws-error
 https://joaoalves.dev/posts/kotlin-playground/kotlin-backend-yes-its-possible/
 -->

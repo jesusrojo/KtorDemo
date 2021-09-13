@@ -11,19 +11,16 @@ import com.jesusrojo.ktorappwithserver.KtorServer.Companion.localhos8080TestJson
 import com.jesusrojo.ktorappwithserver.KtorServer.Companion.localhos8080TestRawData
 import com.jesusrojo.ktorappwithserver.KtorServer.Companion.localhos8080TestResponse
 import com.jesusrojo.ktorappwithserver.KtorServer.Companion.localhos8080TestString
-import io.ktor.server.engine.*
 
 
 class MainActivity : AppCompatActivity() {
 
     private var isClicked = false
-
     private lateinit var ktorServer:KtorServer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         initUi()
         ktorServer = KtorServer()
     }
@@ -37,10 +34,10 @@ class MainActivity : AppCompatActivity() {
             } else {
                 ktorServer.startServer()
                 button.text = "Stop Server"
-
             }
             isClicked = !isClicked
         }
+
         val button00: Button = findViewById(R.id.btn_00)
         button00.text = localhos8080
         button00.setOnClickListener { makeIntent(localhos8080) }
@@ -72,55 +69,4 @@ class MainActivity : AppCompatActivity() {
         i.data = Uri.parse(finalUrl)
         startActivity(i)
     }
-
-//
-//    private fun runServer() {
-//
-//        server = embeddedServer(Netty, 8080) {
-//            routing {
-//
-//                install(StatusPages) {
-//                    exception<Throwable> { e ->
-//                        call.respondText(e?.localizedMessage, ContentType.Text.Plain, HttpStatusCode.InternalServerError)
-//                    }
-//                }
-//
-//                // GSON
-//                install(ContentNegotiation) {
-//                    gson {}
-//                }
-//
-//                get("/") {
-//                    val random = (0..100).random()
-//                    call.respondText("RANDOM: $random", ContentType.Text.Html)
-//                }
-//
-//                post("/") {
-//                    val request = call.receive<Request>()
-//                    call.respond(request)
-//                }
-//
-//                get("/test") {
-//                    val response = getFakeJsonResponse()
-//                    call.respondText(response)
-//                }
-//
-//                get("/test-json") {
-//                    call.respondText(getFakeJson(), ContentType.Application.Json)
-//                }
-//
-//            }
-//        }.start(wait = false) // false //https://stackoverflow.com/questions/62500669/ktor-android-local-http-server-throws-error
-//    }
-//
-//
-//
-//    private fun stopServer() {
-//        // https://dev.to/viniciusccarvalho/graceful-shutdown-of-ktor-applications-1h53
-//        Runtime.getRuntime().addShutdownHook(Thread {
-//            server?.stop(1, 1, TimeUnit.SECONDS)
-//        })
-//        Thread.currentThread().join()
-//    }
-
 }

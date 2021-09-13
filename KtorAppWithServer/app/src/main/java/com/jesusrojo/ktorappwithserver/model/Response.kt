@@ -5,4 +5,3 @@ data class Response (
     val items: List<RawData>,
     val hasMore: Boolean?
 )
-
