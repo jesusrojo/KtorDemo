@@ -1,4 +1,4 @@
-#### Ktor 
+#### KtorDemo 
 
 Playground project to learn [Ktor][KTOR]
 
@@ -21,5 +21,7 @@ More info: [Adding Ktor to an existing Gradle project][KTOR_GRADLE]
 [JETBRAINS]: https://www.jetbrains.com/idea/
 [ANDROID_STUDIO]: https://developer.android.com/studio/
 
-[//]: # https://stackoverflow.com/questions/62500669/ktor-android-local-http-server-throws-error
-[//]: # https://joaoalves.dev/posts/kotlin-playground/kotlin-backend-yes-its-possible/
+<!--
+https://stackoverflow.com/questions/62500669/ktor-android-local-http-server-throws-error
+https://joaoalves.dev/posts/kotlin-playground/kotlin-backend-yes-its-possible/
+-->
