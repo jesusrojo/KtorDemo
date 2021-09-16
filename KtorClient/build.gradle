@@ -1,0 +1,26 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    implementation "io.ktor:ktor-client-core:1.6.3"
+    implementation "io.ktor:ktor-client-cio:1.6.3"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
